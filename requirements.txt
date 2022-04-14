@@ -1,6 +1,14 @@
 asgiref==3.4.1
 Django==3.2.13
-# pkg-resources==0.0.0
+django-appconf==1.0.5
+django-compressor==3.1
+django-libsass==0.9
+django-widget-tweaks==1.4.11
+libsass==0.21.0
+pkg_resources==0.0.0
 pytz==2022.1
+rcssmin==1.1.0
+rjsmin==1.2.0
+six==1.16.0
 sqlparse==0.4.2
-typing-extensions==4.1.1
+typing_extensions==4.1.1
