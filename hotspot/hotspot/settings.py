@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # third part 
    'widget_tweaks',
    'compressor',
+   'django_heroku',
     # local app 
     'hotspotapp',
     
