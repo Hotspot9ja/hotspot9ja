@@ -1,0 +1,16 @@
+{% extends 'base/base.html' %}
+{% block title %}Profile | Hotspot9ja {% endblock title %}
+{% block content %}
+{% load widget_tweaks %}
+{% block title %}Profile Page{% endblock title %}
+
+{% block content %} 
+    <h2>Profile Page</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+        <br><br>
+        <a href="{% url 'home' %}">Back</a>
+    </form>
+{% endblock content %}
