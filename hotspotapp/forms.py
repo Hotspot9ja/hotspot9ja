@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from .models import Producer, Artist, Commedian, Dj
 
 # Sign Up Form
 class SignUpForm(UserCreationForm):
@@ -30,3 +31,45 @@ class ProfileForm(forms.ModelForm):
             'last_name', 
             'email',
             ]
+        
+class Producer(forms.ModelForm):
+    class Meta:
+        model = Producer
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'location'
+        ]
+        
+class Artist(forms.ModelForm):
+    class Meta:
+        model = Artist
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'location'
+        ]
+        
+class Commedian(forms.ModelForm):
+    class Meta:
+        model = Commedian
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'location'
+        ]
+    
+class Dj(forms.ModelForm):
+    class Meta:
+        model = Dj
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'location'
+        ]
+        
+        

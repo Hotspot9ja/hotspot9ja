@@ -10,4 +10,6 @@ urlpatterns = [
     
     # local app 
     path('', include('hotspotapp.urls')),
+     # api 
+    path('api/', include('api.urls')),
 ]
