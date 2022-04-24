@@ -1,6 +1,9 @@
 from django.urls import path
 from django.contrib.auth import views
-from .views import HomePageView, SignUpView, ProfileView
+from .views import HomePageView, SignUpView, ProfileView, DashboardView
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 app_name = 'hotspotapp'
@@ -21,6 +24,10 @@ urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
     # profile 
     path('accounts/profile/', ProfileView.as_view(), name='profile'),
+    path('profile/dashboard/', DashboardView.as_view(), name='dashboard'),
 
     path('', HomePageView.as_view(), name='home'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

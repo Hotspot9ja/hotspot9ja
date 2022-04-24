@@ -1,0 +1,4 @@
+source env/bin/activate
+
+cd hotspot9ja
+python manage.py runserver localhost:5000

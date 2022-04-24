@@ -1,6 +1,28 @@
 from django.db import models
+from django.conf import settings
+from django_countries.fields import CountryField
+from phone_field import PhoneField
 
 # Create your models here.
+class Profile(models.Model):
+        user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+        profile_image = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
+        about = models.CharField(max_length=400)
+        company = models.CharField(max_length=200)
+        job = models.CharField(max_length=200)
+        country = CountryField()
+        address = models.CharField(max_length=300)
+        phone = PhoneField(blank=True, help_text='Contact phone number')
+        twitter_url = models.URLField()
+        facebook_url = models.URLField()
+        instagram_url = models.URLField()
+        linkedin_url = models.URLField()
+        
+        class meta:
+            exclude = ['user']
+        
+        
+
 class Artist(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
