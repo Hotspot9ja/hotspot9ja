@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views
-from .views import HomePageView, SignUpView, ProfileView, DashboardView
+from .views import HomePageView, SignUpView, ProfileView, DashboardView, UserProfile
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -25,6 +25,7 @@ urlpatterns = [
     # profile 
     path('accounts/profile/', ProfileView.as_view(), name='profile'),
     path('profile/dashboard/', DashboardView.as_view(), name='dashboard'),
+    path('profile/users-profile/', UserProfile.as_view(), name='users_profile'),
 
     path('', HomePageView.as_view(), name='home'),
 ]

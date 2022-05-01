@@ -20,6 +20,9 @@ class Profile(models.Model):
         
         class meta:
             exclude = ['user']
+            
+        def __unicode__(self):
+            return self.job
         
         
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView, UpdateView
+from django.views.generic import TemplateView, CreateView, UpdateView, FormView
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from .forms import SignUpForm, ProfileForm, EditProfileForm
@@ -35,7 +35,11 @@ class ProfileView(LoginRequiredMixin, CreateView):
     
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'dashboard/dashboard.html'
-class EditProfileView(UpdateView):
+    
+class UserProfile(LoginRequiredMixin, FormView):
+    template_name = 'dashboard/users-profile.html'
+    form_class = ProfileForm
+class EditProfileView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = EditProfileForm
     template_name = ''
