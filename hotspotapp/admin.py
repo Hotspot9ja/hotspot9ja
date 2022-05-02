@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import Producer, Artist, Commedian, Dj, Profile
+from .models import Contact, Producer, Artist, Commedian, Dj, Profile
 
 # Register your models here.
-@admin.register(Producer, Artist, Commedian, Dj, Profile)
+@admin.register(Producer, Artist, Commedian, Dj, Profile, Contact)
 class ProducerAdmin(admin.ModelAdmin):
     pass
 
@@ -18,3 +18,11 @@ class DjAdmin(admin.ModelAdmin):
     
 class ProfileAdmin(admin.ModelAdmin):
     pass
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = [
+        'name',
+        'email',
+        'subject',
+        'message'
+    ]

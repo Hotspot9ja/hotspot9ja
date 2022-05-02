@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView, UpdateView, FormView
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from .forms import SignUpForm, ProfileForm, EditProfileForm
+from .forms import ContactForm, SignUpForm, ProfileForm, EditProfileForm
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -12,8 +12,36 @@ from .models import Artist, Producer, Commedian, Dj
 from api.serializers import ArtistSerializer
 
 # Create your views here.
-class HomePageView(TemplateView):
+class HomePageView(TemplateView, FormView):
     template_name = 'index.html'
+    form_class = ContactForm
+    success_url = '/'
+    
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        form.send_email()
+        return super().form_valid(form)
+    
+class AboutPageView(TemplateView):
+    template_name = 'pages/about.html'
+    
+class ServicesPageView(TemplateView):
+    template_name = 'pages/services.html'
+    
+class PortfolioPageView(TemplateView):
+    template_name = 'pages/portfolio.html'
+    
+class TermPageView(TemplateView):
+    template_name = 'pages/terms.html'
+    
+class PrivacyPolicyPageView(TemplateView):
+    template_name = 'pages/privacy_policy.html'
+    
+class BlogPageView(TemplateView):
+    template_name = 'pages/blog.html'
+    
+
 
 # Sign Up View
 class SignUpView(CreateView):

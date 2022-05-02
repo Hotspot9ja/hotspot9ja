@@ -1,8 +1,7 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% block content %}
-
-<body>
+{% load widget_tweaks %}
 <!-- nav  -->
 {% include "base/nav.html" %}
 
@@ -1105,23 +1104,23 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form">
+            <form action="" method="post" class="php-email-form">
+              {% csrf_token %}
               <div class="row gy-4">
-
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                 {{ form.name|add_class:'form-control'|attr:'placeholder:Name'}}
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                {{form.email|add_class:'form-control'|attr:'placeholder:Email'}}
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                {{form.subject|add_class:'form-control'|attr:'placeholder:Subject'}}
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  {{form.message|add_class:'form-control'|attr:'placeholder:Message'|attr:"row:6"}}
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -1134,15 +1133,10 @@
 
               </div>
             </form>
-
           </div>
-
         </div>
-
       </div>
-
     </section><!-- End Contact Section -->
-
   </main><!-- End #main -->
   {% include "base/footer.html" %}
 {% endblock %}

@@ -84,3 +84,16 @@ class Dj(models.Model):
         
     def __str__(self):
         return self.first_name
+    
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=250)
+    subject = models.CharField(max_length=250)
+    message = models.TextField()
+    
+    class Meta:
+        managed = True
+        verbose_name = 'contact'
+        
+    def __str__(self):
+        return self.name

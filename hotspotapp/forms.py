@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from .models import Profile, Producer, Artist, Commedian, Dj
+from .models import Contact, Profile, Producer, Artist, Commedian, Dj
 # Sign Up Form
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=False, help_text='Optional')
@@ -107,4 +107,16 @@ class Dj(forms.ModelForm):
             'location'
         ]
         
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = [
+            'name',
+            'email',
+            'subject',
+            'message'
+        ]
         
+    def send_email(self):
+        # send email using the self.cleaned_data dictionary
+        pass
