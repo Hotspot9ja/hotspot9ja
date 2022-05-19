@@ -109,7 +109,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{ request.profile.profile_image.url}}" alt="Profile" class="rounded-circle">
+            <img src="{{ profile.profile_image.url }}" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">{{ request.user.last_name }}</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -175,13 +175,13 @@
       <li class="nav-item">
         <a class="nav-link " href="index.html">
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>Home</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#test-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Test</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-bar-chart"></i><span>Trending</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="test-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -199,7 +199,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#producers-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Something</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>Top Songs</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="producers-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -227,7 +227,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#stuff-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Stuff</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-layout-text-window-reverse"></i><span>Top Albums</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="stuff-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -245,7 +245,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#data-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bar-chart"></i><span>Data</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-bar-chart"></i><span>Playlists</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="data-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -268,7 +268,7 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Blank</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-gem"></i><span>Accounts to Follow</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -289,7 +289,144 @@
         </ul>
       </li><!-- End Blank Nav -->
 
-      <li class="nav-heading">Pages</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Recently Added</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank1</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank2</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank3</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Blank Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Hotspot9ja World</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank1</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank2</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank3</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Blank Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Artist Guide</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank1</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank2</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank3</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Blank Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Comedian's Guide</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank1</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank2</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank3</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Blank Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Get Premium</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank1</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank2</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank3</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Blank Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#blank-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Hotspot9ja Stdio</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="blank-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank1</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank2</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>blank3</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Blank Nav -->
+      <li class="nav-heading text-uppercase">My Library</li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="{% url 'hotspotapp:users_profile' %}">
@@ -301,28 +438,28 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-faq.html">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>Feeds</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-contact.html">
           <i class="bi bi-envelope"></i>
-          <span>Contact</span>
+          <span>Favorites</span>
         </a>
       </li><!-- End Contact Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-error-404.html">
           <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
+          <span>Playlists</span>
         </a>
       </li><!-- End Error 404 Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-blank.html">
           <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
+          <span>Uploads</span>
         </a>
       </li><!-- End Blank Page Nav -->
 
@@ -336,14 +473,74 @@
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item">Welcome</a></li>
+          <li class="breadcrumb-item active">Sammy</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
+      <div class="container">
+       <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between">
+            <h3 class="card-title">
+              <i class="bi bi-bar-chart mx-1"></i>Trending
+            </h3>
+            <div class="d-flex">
+              <h5 class="">Genre:</h5><button class="btn btn-warning">All Genres</button>
+            </div>
+          </div>
+        </div>
 
+
+            <!-- top songs  -->
+            <section>
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <h3 class="card-title">
+                    <i class="bi bi-bar-chart mx-1"></i>Top Songs
+                  </h3>
+                  <div class="d-flex">
+                    <h5 class="">Top Songs:</h5><button class="btn btn-warning">All Songs</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          <!-- end top songs  -->
+
+          <!-- top Albums  -->
+          <section>
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">
+                  <i class="bi bi-bar-chart mx-1"></i>Top Albums
+                </h3>
+                <div class="d-flex">
+                  <h5 class="">Top Albums:</h5><button class="btn btn-warning">All Albums</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end to Albums -->
+
+           <!-- Hotspot9ja world -->
+           <section>
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">
+                  <i class="bi bi-bar-chart mx-1"></i>Hotspot9ja World
+                </h3>
+                <div class="d-flex">
+                  <h5 class=""><a href="http://" class="text-warning">read more</a></h5>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end to Albums -->
+        </div>
+       </div>
+      </div>
     </section>
 
   </main><!-- End #main -->
@@ -353,6 +550,7 @@
     <div class="copyright">
       &copy; Copyright <strong><span>Hotspot9ja</span></strong>. All Rights Reserved
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
 {% endblock %}

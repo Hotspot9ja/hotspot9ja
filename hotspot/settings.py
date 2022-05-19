@@ -33,11 +33,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # third part 
-   'widget_tweaks',
-   'django_heroku',
-   'rest_framework',
-   'django_countries',
-   'phone_field',
+    'widget_tweaks',
+    'django_heroku',
+    'rest_framework',
+    'django_countries',
+    'phone_field',
+    'compressor',
     # local app 
     'hotspotapp',
     'api',
@@ -121,7 +122,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+STATICFILES_FINDERS = (
+    'compressor.finders.CompressorFinder',
+)
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '_static'),

@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # rest framework 
 from rest_framework import generics
-from .models import Artist, Producer, Commedian, Dj
+from .models import Artist, Producer, Commedian, Dj, Profile
 from api.serializers import ArtistSerializer
 
 # Create your views here.
@@ -60,6 +60,12 @@ class ProfileView(LoginRequiredMixin, CreateView):
         form.instance.user=self.request.user
         form.save()
         return super().form_valid(form)
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["profile"] = Profile.objects.filter(profile_image=self.kwargs)
+        return context
+    
     
 class DashboardView(LoginRequiredMixin, TemplateView):
     template_name = 'dashboard/dashboard.html'
