@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 # rest framework 
-from rest_framework import generics
+# from rest_framework import generics
 from .models import Artist, Producer, Commedian, Dj, Profile
 from api.serializers import ArtistSerializer
 
@@ -50,21 +50,19 @@ class SignUpView(CreateView):
     template_name = 'registration/signup.html'
     
 # Edit Profile View
-class ProfileView(LoginRequiredMixin, CreateView):
-    model = User
-    form_class = ProfileForm
-    success_url = reverse_lazy('hotspotapp:dashboard')
+class ProfileView(LoginRequiredMixin, TemplateView):
+    model = Profile
     template_name = 'registration/profile.html'
     
-    def form_valid(self, form):
-        form.instance.user=self.request.user
-        form.save()
-        return super().form_valid(form)
-    
     def get_context_data(self, **kwargs):
+        # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        context["profile"] = Profile.objects.filter(profile_image=self.kwargs)
+        # Add in a QuerySet of all the books
+        context['profile'] = Profile.objects.all()
         return context
+    
+  
+
     
     
 class DashboardView(LoginRequiredMixin, TemplateView):
@@ -77,6 +75,7 @@ class EditProfileView(LoginRequiredMixin, UpdateView):
     model = User
     form_class = EditProfileForm
     template_name = ''
-class ArtistAPIView(generics.ListAPIView):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+# class ArtistAPIView(generics.ListAPIView):
+#     queryset = Artist.objects.all()
+#     serializer_class = ArtistSerializer
+    
