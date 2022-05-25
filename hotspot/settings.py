@@ -140,4 +140,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 django_heroku.settings(locals())
-LOGIN_REDIRECT = 'hotspotapp:profile'
+LOGIN_REDIRECT_URL = 'hotspotapp:profile'

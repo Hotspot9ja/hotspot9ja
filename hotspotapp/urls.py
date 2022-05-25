@@ -24,7 +24,7 @@ urlpatterns = [
     path('signup/', SignUpView.as_view(), name='signup'),
     
     # profile 
-    path('accounts/dashboard/', ProfileView.as_view(), name='profile'),
+    path('accounts/profile/', ProfileView.as_view(), name='profile'),
     # path('profile/dashboard/', DashboardView.as_view(), name='dashboard'),
     path('profile/users-profile/', UserProfile.as_view(), name='users_profile'),
     
