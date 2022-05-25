@@ -32,6 +32,9 @@ class ServicesPageView(TemplateView):
 class PortfolioPageView(TemplateView):
     template_name = 'pages/portfolio.html'
     
+class PortfolioDetailView(TemplateView):
+    template_name = 'pages/portfolio-details.html'
+    
 class TermPageView(TemplateView):
     template_name = 'pages/terms.html'
     

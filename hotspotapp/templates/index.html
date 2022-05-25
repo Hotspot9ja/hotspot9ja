@@ -665,7 +665,7 @@
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img1.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -679,7 +679,7 @@
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img3.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -693,7 +693,7 @@
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img8.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -707,7 +707,7 @@
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img9.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -721,7 +721,7 @@
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img5.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -735,7 +735,7 @@
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img4.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -749,7 +749,7 @@
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img6.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -763,7 +763,7 @@
                 <p>Card</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img7.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -777,7 +777,7 @@
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="/static/images/new/img2.jpeg" data-gallery="portfolioGallery" class="portfokio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+                  <a href="{% url 'hotspotapp:portfolio_detail' %}" title="More Details"><i class="bi bi-link"></i></a>
                 </div>
               </div>
             </div>
@@ -1013,63 +1013,48 @@
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="recent-blog-posts" class="recent-blog-posts">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>Blog</h2>
           <p>Recent posts form our Blog</p>
         </header>
-
         <div class="row">
-
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="/static/images/blog/blog-1.jpg" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="/static/images/new/img5.jpeg" class="img-fluid" alt=""></div>
               <span class="post-date">Tue, September 15</span>
               <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
               <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="/static/images/blog/blog-2.jpg" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="/static/images/new/img9.jpeg" class="img-fluid" alt=""></div>
               <span class="post-date">Fri, August 28</span>
               <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
               <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-
           <div class="col-lg-4">
             <div class="post-box">
-              <div class="post-img"><img src="/static/images/blog/blog-3.jpg" class="img-fluid" alt=""></div>
+              <div class="post-img"><img src="/static/images/new/img2.jpeg" class="img-fluid" alt=""></div>
               <span class="post-date">Mon, July 11</span>
               <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
               <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </section><!-- End Recent Blog Posts Section -->
-
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-
       <div class="container" data-aos="fade-up">
-
         <header class="section-header">
           <h2>Contact</h2>
           <p>Contact Us</p>
         </header>
-
         <div class="row gy-4">
-
           <div class="col-lg-6">
-
             <div class="row gy-4">
               <div class="col-md-6">
                 <div class="info-box">
@@ -1100,9 +1085,7 @@
                 </div>
               </div>
             </div>
-
           </div>
-
           <div class="col-lg-6">
             <form action="" method="post" class="php-email-form">
               {% csrf_token %}
@@ -1110,7 +1093,6 @@
                 <div class="col-md-6">
                  {{ form.name|add_class:'form-control'|attr:'placeholder:Name'}}
                 </div>
-
                 <div class="col-md-6 ">
                 {{form.email|add_class:'form-control'|attr:'placeholder:Email'}}
                 </div>
@@ -1122,15 +1104,12 @@
                 <div class="col-md-12">
                   {{form.message|add_class:'form-control'|attr:'placeholder:Message'|attr:"row:6"}}
                 </div>
-
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
-
                   <button type="submit">Send Message</button>
                 </div>
-
               </div>
             </form>
           </div>

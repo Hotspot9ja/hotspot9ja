@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views
-from .views import AboutPageView, BlogPageView, HomePageView, PortfolioPageView, PrivacyPolicyPageView, ServicesPageView, SignUpView, ProfileView, DashboardView, TermPageView, UserProfile
+from .views import AboutPageView, BlogPageView, HomePageView, PortfolioDetailView, PortfolioPageView, PrivacyPolicyPageView, ServicesPageView, SignUpView, ProfileView, DashboardView, TermPageView, UserProfile
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -33,6 +33,7 @@ urlpatterns = [
     path('about/', AboutPageView.as_view(), name='about'),
     path('services/', ServicesPageView.as_view(), name='services'),
     path('portfolio/', PortfolioPageView.as_view(), name='portfolio'),
+    path('portfolio_detail/', PortfolioDetailView.as_view(), name='portfolio_detail'),
     path('term/', TermPageView.as_view(), name='terms'),
     path('privacy_policy/', PrivacyPolicyPageView.as_view(), name='privacy_policy'),
     path('blog/', BlogPageView.as_view(), name='blog'),
